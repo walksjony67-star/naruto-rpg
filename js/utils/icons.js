@@ -1,0 +1,52 @@
+const LUCIDE_PATHS = {
+  panel: '<path d="M3 3h18v18H3z"/><path d="M9 3v18"/>', // Sidebar
+  timeline: '<path d="M12 20V4"/><path d="m8 16 4 4 4-4"/><path d="m16 8-4-4-4 4"/>', // Arrow Up Down
+  settings: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/>', // Settings -> Changed to Shield/Scroll metaphor
+  mobile: '<rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/>',
+  send: '<line x1="22" x2="11" y1="2" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>',
+  export: '<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" x2="12" y1="3" y2="15"/>',
+  close: '<path d="M18 6 6 18"/><path d="m6 6 12 12"/>',
+  check: '<polyline points="20 6 9 17 4 12"/>',
+  menu: '<line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/>',
+  map: '<polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" x2="8" y1="2" y2="18"/><line x1="16" x2="16" y1="6" y2="22"/>',
+  fullscreen: '<path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>',
+  zen: '<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>'
+};
+
+const ICONS = {
+  chakra: 'icon-chakra',
+  spirit: 'icon-spirit',
+  willpower: 'icon-willpower',
+  speed: 'icon-speed',
+  luck: 'icon-luck',
+  male: 'icon-male',
+  female: 'icon-female',
+  taijutsu: 'icon-taijutsu',
+  ninjutsu: 'icon-ninjutsu',
+  tool: 'icon-tool',
+  defense: 'icon-defense',
+  retreat: 'icon-retreat',
+  combat: 'icon-combat',
+  fire: 'icon-fire',
+  wind: 'icon-wind',
+  lightning: 'icon-lightning',
+  earth: 'icon-earth',
+  water: 'icon-water',
+  yin: 'icon-yin',
+  yang: 'icon-yang',
+  ice: 'icon-ice',
+  lock: 'icon-lock'
+};
+
+export function icon(name, size = 18) {
+  // If it's in our upgraded Lucide paths, use the crisp inline vector
+  if (LUCIDE_PATHS[name]) {
+    return `<svg class="icon lucide-icon" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">${LUCIDE_PATHS[name]}</svg>`;
+  }
+  // Otherwise fallback to existing SVG sprite, but force 1.5px stroke for aesthetics
+  const id = ICONS[name] || name;
+  return `<svg class="icon legacy-icon" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><use href="img/icons.svg#${id}"/></svg>`;
+}
+
+export { ICONS, LUCIDE_PATHS };
+export default icon;

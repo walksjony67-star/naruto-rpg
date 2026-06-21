@@ -1,0 +1,147 @@
+/* ═══════════════════════════════════════════
+   忍者手记 — Cinematic Ink Tokens v5.0
+   现代数字水墨 · 极简留白 · 史诗排版
+   ═══════════════════════════════════════════ */
+
+:root {
+  /* ── Cinematic Ink 色板 ──────── */
+  --c-void:        #030406; /* 深渊底色 */
+  --c-shikkoku:    #070a0e;
+  --c-sumi:        #0e1218;
+  --c-washi:       #f4f1ea; /* 高对比度柔和白 */
+  --c-washi-dim:   #d1cec7;
+
+  --c-shuiro:      #eb613f; /* 核心强调色 - 朱 */
+  --c-kokihi:      #c9171e;
+  --c-kin:         #c69c6d; /* 次要强调色 - 金 */
+  --c-kin-bright:  #e8c87a;
+  --c-moegi:       #16a06d;
+  --c-ruri:        #2d6cdf;
+
+  /* ── Cinematic Surfaces (Glassmorphism) ──────── */
+  --surface-base:  hsl(240, 5%, 8%); /* 最底层的阅读区玄色 */
+  --surface-0:     var(--c-void);
+  --surface-1:     rgba(11, 14, 19, 0.65); /* 侧边栏/顶栏 */
+  --surface-2:     rgba(17, 21, 26, 0.50); /* 卡片底色 */
+  --surface-3:     rgba(25, 30, 38, 0.40); /* Hover/Active */
+  --surface-4:     rgba(35, 42, 53, 0.30);
+  
+  --surface-bento: rgba(255, 255, 255, 0.015); /* Bento Grid 默认底板 */
+  --surface-bento-hover: rgba(255, 255, 255, 0.04);
+  --surface-inset: rgba(0, 0, 0, 0.4); /* 凹陷空槽背景 */
+  --surface-icon-wrapper: rgba(255, 255, 255, 0.03); /* 图标底座 */
+  --surface-icon-wrapper-hover: rgba(255, 255, 255, 0.08);
+  
+  --blur-md:       blur(12px) saturate(120%);
+  --blur-lg:       blur(24px) saturate(150%);
+  --blur-xl:       blur(40px) saturate(180%);
+
+  /* ── Typography (杂志级排版) ──────── */
+  --text-primary:    rgba(255, 255, 255, 0.95);
+  --text-secondary:  rgba(244, 241, 234, 0.70);
+  --text-tertiary:   rgba(244, 241, 234, 0.45);
+  --text-accent:     var(--c-shuiro);
+  --text-gold:       var(--c-kin-bright);
+
+  /* ── Borders (极简空间感，去除实体线) ──────── */
+  --border-hairline: rgba(255, 255, 255, 0.03);
+  --border-subtle:   rgba(255, 255, 255, 0.08);
+  --border-default:  rgba(255, 255, 255, 0.15);
+  --border-strong:   rgba(255, 255, 255, 0.30);
+  --border-accent:   rgba(235, 97, 63,  0.40);
+
+  /* ── Shadows (克制的深度，移除脏感光晕) ──────── */
+  --shadow-sm:     0 2px 8px rgba(0,0,0,0.4);
+  --shadow-md:     0 8px 24px rgba(0,0,0,0.6);
+  --shadow-lg:     0 24px 48px rgba(0,0,0,0.8);
+  --shadow-glow:   0 8px 32px rgba(235, 97, 63, 0.2);
+  --shadow-glow-strong: 0 4px 14px 0 rgba(255, 81, 47, 0.39); /* 结印按钮高亮发光 */
+  --shadow-inner:  inset 0 0 0 1px rgba(255, 255, 255, 0.04); /* Linear-style 内描边切割线 */
+  --shadow-inner-hover: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  --shadow-inset-deep: inset 0 2px 6px rgba(0,0,0,0.6), inset 0 0 0 1px rgba(0,0,0,0.8); /* 凹陷空槽 */
+
+  /* ── Fonts ──────── */
+  --font-title: 'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', 'SimSun', serif;
+  --font-body:  'Noto Sans SC', 'Microsoft YaHei UI', 'PingFang SC', system-ui, sans-serif;
+  --font-mono:  'JetBrains Mono', 'Fira Code', monospace;
+  --font-brush: 'Kaiti SC', 'STKaiti', 'KaiTi', cursive;
+
+  /* 重新调校字号，拉大层级，提供更精准的控制 */
+  --text-2xs: 0.75rem;
+  --text-xs:  0.8125rem;
+  --text-sm:  0.875rem;
+  --text-base: 1rem;
+  --text-md:  1.125rem;
+  --text-lg:  1.5rem;
+  --text-xl:  2rem;
+  --text-2xl: 3rem;
+  --text-3xl: 4.5rem;
+
+  --chat-font-size: 1.0625rem; /* 正文适当增大 */
+  --chat-line-height: 1.9;     /* 舒适的阅读行高 */
+
+  --fw-normal:   400;
+  --fw-medium:   500;
+  --fw-semibold: 600;
+  --fw-bold:     700;
+  --fw-heavy:    900;
+
+  --leading-tight:  1.2;
+  --leading-normal: 1.6;
+  --leading-relaxed: 1.9;
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0em;
+  --tracking-wide:  0.05em;
+  --tracking-epic:  0.15em;
+
+  /* ── Spacing (8点网格) ──────── */
+  --sp-1:  4px;
+  --sp-2:  8px;
+  --sp-3:  12px;
+  --sp-4:  16px;
+  --sp-5:  24px;
+  --sp-6:  32px;
+  --sp-8:  48px;
+  --sp-10: 64px;
+  --sp-12: 96px;
+  --sp-16: 128px;
+
+  /* ── Radii (现代圆角) ──────── */
+  --r-sm:  4px;
+  --r-md:  8px;
+  --r-lg:  16px;
+  --r-xl:  24px;
+  --r-full: 9999px;
+
+  /* ── Easing (丝滑阻尼) ──────── */
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.1);
+
+  --dur-fast:  150ms;
+  --dur-base:  300ms;
+  --dur-slow:  600ms;
+
+  /* ── Layout ──────── */
+  --topbar-h:    64px;
+  --statusbar-h: 36px;
+  --sidebar-w:   260px;
+  --panel-w:     320px;
+  --chat-max-w:  860px;
+
+  /* ── Z-Index ──────── */
+  --z-base:     1;
+  --z-dropdown: 100;
+  --z-sticky:   200;
+  --z-overlay:  300;
+  --z-modal:    400;
+  --z-toast:    500;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

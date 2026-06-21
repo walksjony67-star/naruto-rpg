@@ -1,0 +1,14 @@
+node_modules/
+dist/
+temp_*.js
+test.html
+test.js
+test_replace.js
+find_*.js
+fix*.js
+search.js
+.DS_Store
+Thumbs.db
+~/
+.claude/
+.playwright-mcp/

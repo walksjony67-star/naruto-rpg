@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+<!-- ══════════════════════════════════════
+     忍道传承 — Icon Set (Wabi-Sabi Style)
+     手绘风格 · 线条 1.5-2px · 朱色主机
+     ══════════════════════════════════════ -->
+
+  <!-- 面板/角色 -->
+  <symbol id="icon-panel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="3" width="7" height="7" rx="1.5"/>
+    <rect x="14" y="3" width="7" height="7" rx="1.5"/>
+    <rect x="3" y="14" width="7" height="7" rx="1.5"/>
+    <rect x="14" y="14" width="7" height="7" rx="1.5"/>
+  </symbol>
+
+  <!-- 时间线/历 -->
+  <symbol id="icon-timeline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 6h16M4 12h10M4 18h14"/>
+    <circle cx="19" cy="12" r="2"/>
+    <circle cx="17" cy="18" r="2"/>
+  </symbol>
+
+  <!-- 设置/设 -->
+  <symbol id="icon-settings" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="3"/>
+    <path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"/>
+  </symbol>
+
+  <!-- 查克拉 (漩涡) -->
+  <symbol id="icon-chakra" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+    <path d="M12 3C7 3 3 7 3 12s4 9 9 9"/>
+    <path d="M12 3c2.5 0 4.5 4 4.5 9s-2 9-4.5 9"/>
+    <circle cx="12" cy="12" r="2"/>
+  </symbol>
+
+  <!-- 精神力 (月) -->
+  <symbol id="icon-spirit" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+  </symbol>
+
+  <!-- 意志力 (拳) -->
+  <symbol id="icon-willpower" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M18 11V6a2 2 0 00-2-2 2 2 0 00-2 2v1"/>
+    <path d="M14 10V4a2 2 0 00-2-2 2 2 0 00-2 2v2"/>
+    <path d="M10 10.5V6a2 2 0 00-2-2 2 2 0 00-2 2v8"/>
+    <path d="M18 8a2 2 0 012 2v5.5a6.5 6.5 0 01-13 0V13a2 2 0 012-2h1"/>
+  </symbol>
+
+  <!-- 速度 (风) -->
+  <symbol id="icon-speed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M9.59 4.59A2 2 0 1111 8H2m10.59 11.41A2 2 0 1014 16H2m15.73-8.27A3.5 3.5 0 1019.5 12H2"/>
+  </symbol>
+
+  <!-- 幸运 (星) -->
+  <symbol id="icon-luck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+  </symbol>
+
+  <!-- 男性 -->
+  <symbol id="icon-male" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="10" cy="10" r="6"/>
+    <path d="M15 5l5-2M20 3v5h-5"/>
+  </symbol>
+
+  <!-- 女性 -->
+  <symbol id="icon-female" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="8" r="5"/>
+    <path d="M12 13v8M9 18h6"/>
+  </symbol>
+
+  <!-- 体术 (拳打) -->
+  <symbol id="icon-taijutsu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+    <path d="M15 9l-6 6M9 9h.01M15 15h.01"/>
+  </symbol>
+
+  <!-- 忍术 (火焰) -->
+  <symbol id="icon-ninjutsu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 2c1 4-4 6-4 10a4 4 0 008 0c0-4-5-6-4-10z"/>
+    <path d="M12 18a1.5 1.5 0 01-1.5-1.5c0-1 .5-1.5 1.5-2.5 1 1 1.5 1.5 1.5 2.5A1.5 1.5 0 0112 18z"/>
+  </symbol>
+
+  <!-- 道具 (卷轴) -->
+  <symbol id="icon-tool" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 4h16v16H4z"/>
+    <path d="M4 9h16M9 4v16"/>
+    <circle cx="15" cy="15" r="2"/>
+  </symbol>
+
+  <!-- 防御 (盾) -->
+  <symbol id="icon-defense" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 2l8 4v6c0 5.5-3.8 10.7-8 12-4.2-1.3-8-6.5-8-12V6l8-4z"/>
+  </symbol>
+
+  <!-- 撤退 (跑) -->
+  <symbol id="icon-retreat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+  </symbol>
+
+  <!-- 战斗 (刀交叉) -->
+  <symbol id="icon-combat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M14.5 17.5L3 6l3-3 11.5 11.5"/>
+    <path d="M17 14l3 3-3 3-3-3"/>
+    <path d="M8.5 8.5L17 17"/>
+  </symbol>
+
+  <!-- 火遁 -->
+  <symbol id="icon-fire" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 2c1.5 4-4 7-4 11a4.5 4.5 0 009 0c0-4-5-7-4-11-1.5 3-6 4-6 7a2.5 2.5 0 005 0c0-3-4-5-4-7z"/>
+  </symbol>
+
+  <!-- 风遁 -->
+  <symbol id="icon-wind" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M9.59 4.59A2 2 0 1111 8H2m10.59 11.41A2 2 0 1014 16H2m15.73-8.27A3.5 3.5 0 1019.5 12H2"/>
+  </symbol>
+
+  <!-- 雷遁 -->
+  <symbol id="icon-lightning" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <polygon points="13,2 3,14 12,14 11,22 21,10 12,10"/>
+  </symbol>
+
+  <!-- 土遁 -->
+  <symbol id="icon-earth" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+    <path d="M2 17l10 5 10-5"/>
+    <path d="M2 12l10 5 10-5"/>
+  </symbol>
+
+  <!-- 水遁 -->
+  <symbol id="icon-water" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 2C12 2 5 10 5 14a7 7 0 0014 0C19 10 12 2 12 2z"/>
+  </symbol>
+
+  <!-- 阴遁 -->
+  <symbol id="icon-yin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+    <circle cx="12" cy="12" r="9"/>
+    <path d="M12 3v9l6.36 4.24"/>
+  </symbol>
+
+  <!-- 阳遁 -->
+  <symbol id="icon-yang" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+    <circle cx="12" cy="12" r="5"/>
+    <path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"/>
+  </symbol>
+
+  <!-- 冰遁 -->
+  <symbol id="icon-ice" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+    <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07"/>
+  </symbol>
+
+  <!-- 锁/安全 -->
+  <symbol id="icon-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="11" width="18" height="11" rx="2"/>
+    <path d="M7 11V7a5 5 0 0110 0v4"/>
+  </symbol>
+
+  <!-- 发送/结印 -->
+  <symbol id="icon-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+  </symbol>
+
+  <!-- 导出 -->
+  <symbol id="icon-export" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+    <polyline points="7,10 12,15 17,10"/>
+    <line x1="12" y1="15" x2="12" y2="3"/>
+  </symbol>
+
+  <!-- 手机/移动端 -->
+  <symbol id="icon-mobile" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+    <path d="M12 18h.01"/>
+  </symbol>
+</svg>

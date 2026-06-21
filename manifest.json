@@ -1,0 +1,24 @@
+{
+  "name": "忍者手记 - 火影忍者AI跑团",
+  "short_name": "忍者手记",
+  "description": "火影忍者世界观AI单人文字跑团游戏",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0f0d0c",
+  "theme_color": "#eb613f",
+  "orientation": "any",
+  "lang": "zh-CN",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' fill='%230f0d0c' rx='32'/%3E%3Crect x='52' y='52' width='88' height='88' fill='%23eb613f' transform='rotate(45 96 96)'/%3E%3Ctext x='96' y='111' text-anchor='middle' font-size='46' fill='%23e8e4d9' font-family='serif' font-weight='800'%3E印%3C/text%3E%3C/svg%3E",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' fill='%230f0d0c' rx='72'/%3E%3Crect x='138' y='138' width='236' height='236' fill='%23eb613f' transform='rotate(45 256 256)'/%3E%3Ctext x='256' y='300' text-anchor='middle' font-size='130' fill='%23e8e4d9' font-family='serif' font-weight='800'%3E印%3C/text%3E%3C/svg%3E",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}
