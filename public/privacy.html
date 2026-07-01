@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>隐私政策 - 忍者手记</title>
+  <style>
+    :root {
+      --bg-color: #070a0e;
+      --card-bg: rgba(20, 20, 40, 0.6);
+      --text-color: #e8e4d9;
+      --accent-color: #eb613f;
+      --gold-color: #c69c6d;
+      --border-color: rgba(198, 156, 109, 0.25);
+    }
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: 'Noto Serif SC', 'Source Han Serif SC', serif;
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+      line-height: 1.8;
+    }
+    .container {
+      max-width: 800px;
+      width: 100%;
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(12px);
+    }
+    h1 {
+      color: var(--accent-color);
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 30px;
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 15px;
+    }
+    h2 {
+      color: var(--gold-color);
+      font-size: 18px;
+      margin-top: 30px;
+      border-left: 3px solid var(--accent-color);
+      padding-left: 10px;
+    }
+    p, li {
+      color: #a39f98;
+      font-size: 14px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .highlight {
+      color: var(--accent-color);
+      font-weight: bold;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 12px;
+      color: #666;
+      border-top: 1px solid var(--border-color);
+      padding-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>《忍者手记》隐私政策声明</h1>
+    
+    <p>我们非常重视您的个人信息与隐私安全。本隐私政策阐明了您在使用《忍者手记》AI 文字跑团 RPG 服务时，我们如何收集、使用、存储及保护您的个人数据。</p>
+
+    <h2>一、 我们收集的信息</h2>
+    <p>为了提供核心游戏功能与保障服务器安全，我们仅收集以下必要信息：</p>
+    <ul>
+      <li><b>Discord 身份标识</b>：当您通过 Discord 授权登录时，我们会收集您的 Discord 唯一账号 ID、用户名、全局昵称、头像。这用于在游戏内建立您的用户档案以及读取头像显示。</li>
+      <li><b>Discord 服务器成员关系</b>：在登录时，我们会检查您是否属于特定关联 Discord 服务器的成员，以验证准入权限。此列表检查在内存中完成，我们不会保存您的其他服务器列表。</li>
+      <li><b>云端备份存档</b>：当您在游戏中主动点击“保存当前到云端”时，我们会将您的完整 IndexedDB 时间线节点和游戏数据传输并存储在服务器磁盘上。</li>
+    </ul>
+
+    <h2>二、 我们不收集的敏感信息</h2>
+    <p>1. <span class="highlight">API Key（大模型密钥）</span>：您在设置中填入的 OpenAI/Claude/DeepSeek 密钥<b>完全保存在您本地浏览器的 localStorage 中，我们绝对不会将其存入服务器数据库或磁盘文件</b>。</p>
+    <p>2. 当您进行 AI 对话请求时，前端密钥会通过“无状态代理 (Stateless Proxy)”模式透明透传。后端的代理服务在内存中提取密钥并发起第三方调用后立即将变量销毁，<b>绝不在服务器上记录任何包含 API Key 的日志</b>。</p>
+
+    <h2>三、 信息的使用与共享</h2>
+    <p>我们收集的所有信息仅用于以下用途，绝对不会泄露或向任何第三方出售、转让您的个人信息：</p>
+    <ul>
+      <li>维护您的游戏账户状态及云存档映射；</li>
+      <li>防范木马、恶意刷取等损害服务器安全的行为。</li>
+    </ul>
+
+    <h2>四、 数据的存储与删除</h2>
+    <p>1. <b>本地数据</b>：游戏运行的实时数据存储在您浏览器的 IndexedDB 和 localStorage 中。您可以通过清除浏览器缓存或使用无痕模式彻底清除它们。</p>
+    <p>2. <b>云端数据</b>：您备份在服务器上的云存档，可以随时在设置面板的云存档列表中点击“删除（烧毁）”按钮立刻从服务器磁盘上彻底抹除，没有任何备份残留。</p>
+
+    <h2>五、 Cookie 的使用</h2>
+    <p>我们使用唯一的安全会话 Cookie（命名为 `naruto_token`）。此 Cookie 采用 **HttpOnly** 安全属性签署，仅用于保持您的 Discord 登录态以访问云端存档服务，不会用于任何广告跟踪或第三方追踪。</p>
+
+    <div class="footer">
+      © 2026 忍者手记同人制作组. All Rights Reserved.
+    </div>
+  </div>
+</body>
+</html>

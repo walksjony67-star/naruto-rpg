@@ -18,3 +18,16 @@ find-undeclared.js
 patch-*.cjs
 启动实时同步.bat
 terminal-output.png
+
+# 后端部署相关
+.env
+server/db/*.db
+server/db/*.db-journal
+server/db/*.db-wal
+
+# 隐私/临时文件
+*.png
+!img/*.png
+!public/img/*.png
+discord-proxy-worker.js
+app-shell-history.txt

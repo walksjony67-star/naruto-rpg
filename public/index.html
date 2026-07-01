@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="火影忍者世界观AI单人文字跑团游戏" />
+  <meta name="theme-color" content="#0d0b0a" />
+  <title>忍者手记 - 卷之卷</title>
+
+  <script>
+    (function() {
+      const getParentWidth = () => { try { return parent.window.innerWidth; } catch(e) { return window.innerWidth; } };
+      const syncIframeHeight = () => {
+        try {
+          if (window !== window.parent) {
+            try {
+              const frames = parent.document.querySelectorAll('iframe');
+              for (const f of frames) {
+                if (f.contentWindow === window) {
+                  const targetHeight = getParentWidth() <= 768 ? '550px' : '680px';
+                  if (f.style.height !== targetHeight) {
+                    f.style.height = targetHeight;
+                  }
+                  break;
+                }
+              }
+            } catch (err) {}
+            
+            const targetHeightNum = getParentWidth() <= 768 ? 550 : 680;
+            window.parent.postMessage({ type: 'setHeight', height: targetHeightNum }, '*');
+            window.parent.postMessage({ type: 'resize-iframe', height: targetHeightNum }, '*');
+            window.parent.postMessage({ action: 'resize', height: targetHeightNum }, '*');
+          }
+        } catch (e) {
+          console.warn('[NarutoRPG] Failed to sync iframe height:', e);
+        }
+      };
+      const sync = () => {
+        const app = document.getElementById('app');
+        if (!app) return;
+        const isMobile = getParentWidth() <= 768 || app.classList.contains('is-mobile-forced');
+        app.classList.toggle('is-mobile-view', isMobile);
+        
+        // 检测是否为独立网页运行模式 (非 iframe 嵌入)
+        const isStandalone = window === window.parent;
+        app.classList.toggle('standalone-mode', isStandalone);
+
+        // 动态修正 viewport meta，让 iframe 内 CSS px 与父窗口一致
+        const vp = document.querySelector('meta[name="viewport"]');
+        if (vp) {
+          const pw = getParentWidth();
+          vp.setAttribute('content', 'width=' + pw + ', initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
+        }
+        syncIframeHeight();
+      };
+      window.addEventListener('resize', sync);
+      try { parent.window.addEventListener('resize', sync); } catch(e) {}
+      document.addEventListener('DOMContentLoaded', () => {
+        sync();
+        setInterval(syncIframeHeight, 1000);
+      });
+    })();
+  </script>
+
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E印%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+  <div id="app">
+    <!-- 背景粒子系统移入 #app 内部，确保在原生全屏模式下仍能被正确渲染且不会超出容器 -->
+    <canvas id="chakra-canvas" style="position:absolute;inset:0;pointer-events:none;z-index:0;opacity:0.4;"></canvas>
+  </div>
+
+  <!-- 滤镜系统 -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+    <defs>
+      <!-- 水墨洇染滤镜 (Ink Bleed) -->
+      <filter id="ink-bleed">
+        <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="3" result="noise" />
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.5" xChannelSelector="R" yChannelSelector="G" />
+        <feGaussianBlur stdDeviation="0.4" result="blur" />
+        <feComposite in="SourceGraphic" in2="blur" operator="over" />
+      </filter>
+      <!-- 查克拉流动滤镜 (Chakra Flow) -->
+      <filter id="chakra-flow">
+        <feTurbulence type="turbulence" baseFrequency="0.02 0.1" numOctaves="2" seed="1">
+          <animate attributeName="baseFrequency" dur="10s" values="0.02 0.1;0.03 0.15;0.02 0.1" repeatCount="indefinite" />
+        </feTurbulence>
+        <feDisplacementMap in="SourceGraphic" scale="5" />
+      </filter>
+    </defs>
+  </svg>
+
+  <script type="module" src="js/app.js" charset="utf-8"></script>
+
+  <!-- 降级提示：不支持 ES Module 的浏览器 -->
+  <script nomodule>
+    document.getElementById('app').innerHTML = '<div style="padding:40px;text-align:center;color:#e8e4d9;font-family:serif;"><h1>忍者手记</h1><p>您的浏览器版本过低，不支持运行此游戏。</p><p style="font-size:14px;margin-top:16px;">请使用 Chrome、Edge 或 Firefox 打开</p></div>';
+  </script>
+
+  <noscript>
+    <div style="padding:40px;text-align:center;color:#e8e4d9;font-family:serif;">
+      <h1 style="font-weight:800;letter-spacing:4px;">忍者手记</h1>
+      <p>请启用 JavaScript 来运行游戏</p>
+    </div>
+  </noscript>
+</body>
+</html>

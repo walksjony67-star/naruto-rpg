@@ -1,22 +1,34 @@
 {
   "name": "naruto-rpg",
-  "version": "1.0.0",
-  "description": "一个以火影忍者世界观为背景的 **AI 单人文字跑团游戏**（PWA），由多智能体叙事管道驱动，支持角色养成、战斗、人际关系、世界状态等完整 RPG 系统。",
-  "main": "find-undeclared.js",
-  "directories": {
-    "doc": "docs"
-  },
+  "version": "2.0.0",
+  "description": "火影忍者 AI 文字跑团 RPG — 网页端版本（Discord 登录 + 云存档）",
+  "main": "server/index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "bundle": "node scripts/bundle.mjs",
+    "build-regex": "node scripts/build-regex.mjs"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "jsonwebtoken": "^9.0.2",
+    "cookie-parser": "^1.4.7",
+    "express-rate-limit": "^7.4.0",
+    "dotenv": "^16.4.5",
+    "helmet": "^8.0.0",
+    "compression": "^1.7.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/2024053347-a11y/naruto-rpg.git"
   },
-  "keywords": [],
+  "keywords": ["naruto", "rpg", "ai", "discord"],
   "author": "",
   "license": "ISC",
-  "type": "module",
   "bugs": {
     "url": "https://github.com/2024053347-a11y/naruto-rpg/issues"
   },
